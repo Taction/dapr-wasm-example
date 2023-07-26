@@ -1,0 +1,12 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: wasm
+spec:
+  type: middleware.http.wasm
+  version: v1
+  metadata:
+    - name: guestConfig
+      value: {"environment":"production"}
+    - name: url
+      value: "file:///Users/zc/Desktop/Workspace/blockchain/chain_adapter/codetest/dapr/wasm/middleware/main.wasm"
